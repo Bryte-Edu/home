@@ -333,9 +333,9 @@ const submitForm = async () => {
 
         <div class="max-w-4xl mx-auto space-y-6 animate-fade-in-up-delay">
           <!-- FAQ 1 -->
-          <div 
+          <div
             @click="faqs[0].isOpen = !faqs[0].isOpen"
-            class="card-premium group interactive-premium faq-item cursor-pointer" 
+            class="card-premium group interactive-premium faq-item cursor-pointer"
             style="pointer-events: auto; position: relative; z-index: 20;"
           >
             <div
@@ -364,9 +364,9 @@ const submitForm = async () => {
           </div>
 
           <!-- FAQ 2 -->
-          <div 
+          <div
             @click="faqs[1].isOpen = !faqs[1].isOpen"
-            class="card-premium group interactive-premium faq-item cursor-pointer" 
+            class="card-premium group interactive-premium faq-item cursor-pointer"
             style="pointer-events: auto; position: relative; z-index: 20;"
           >
             <div
@@ -395,9 +395,9 @@ const submitForm = async () => {
           </div>
 
           <!-- FAQ 3 -->
-          <div 
+          <div
             @click="faqs[2].isOpen = !faqs[2].isOpen"
-            class="card-premium group interactive-premium faq-item cursor-pointer" 
+            class="card-premium group interactive-premium faq-item cursor-pointer"
             style="pointer-events: auto; position: relative; z-index: 20;"
           >
             <div
@@ -426,9 +426,9 @@ const submitForm = async () => {
           </div>
 
           <!-- FAQ 4 -->
-          <div 
+          <div
             @click="faqs[3].isOpen = !faqs[3].isOpen"
-            class="card-premium group interactive-premium faq-item cursor-pointer" 
+            class="card-premium group interactive-premium faq-item cursor-pointer"
             style="pointer-events: auto; position: relative; z-index: 20;"
           >
             <div
