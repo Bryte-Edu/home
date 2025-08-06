@@ -14,7 +14,13 @@ import { ref } from "vue";
 
 const selectedPlatform = ref("mobile");
 
-const platforms = [
+const platforms: Array<{
+  id: string;
+  name: string;
+  icon: any;
+  description: string;
+}> = []
+
   // {
   //   id: "mobile",
   //   name: "Mobile Apps",
@@ -35,7 +41,6 @@ const platforms = [
   //   description:
   //     "Access Bryte directly from your browser - no download required",
   // },
-];
 
 const features = [
   "Instant access to all your courses and notes anywhere",
@@ -48,7 +53,7 @@ const features = [
   "Secure cloud backup for your study materials",
 ];
 
-const systemRequirements = {
+const systemRequirements: Record<string, Record<string, string>> = {
   mobile: {
     ios: "Coming soon...", //"iOS 14.0 or later, 2GB RAM recommended",
     android: "Android 8.0 (API level 26) or later",

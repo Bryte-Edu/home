@@ -94,7 +94,7 @@ document.documentElement.classList.add("dark");
             <SunIcon v-if="isDarkMode" class="w-5 h-5 text-foreground" />
             <MoonIcon v-else class="w-5 h-5 text-foreground" />
           </button> -->
-          <TonalButton href="#pricing" title="Get Started" />
+          <TonalButton href="/#pricing" title="Get Started" />
         </div>
       </div>
     </header>
