@@ -21,7 +21,7 @@ const team = [
     role: "Co-founder",
     avatar: "https://avatars.githubusercontent.com/u/79095297",
     bio:
-      "A 17-year-old high school student with a passion for technology and computers.",
+      "A 18-year-old high school student with a passion for technology and computers.",
   },
 ];
 
