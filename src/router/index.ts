@@ -4,6 +4,7 @@ import Contact from "../views/Contact.vue";
 import Download from "../views/Download.vue";
 import Home from "../views/Home.vue";
 import PrivacyPolicy from "../views/PrivacyPolicy.vue";
+import DeleteAccount from "@/views/DeleteAccount.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       name: "download",
       component: Download,
     },
+    {
+      path: "/deletemyccount",
+      name: "deletemyaccount",
+      component: DeleteAccount
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
     // If there's a saved position (e.g., back button), use it

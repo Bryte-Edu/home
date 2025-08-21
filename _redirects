@@ -1,1 +1,4 @@
-/*    /index.html   200
+# SPA routing - redirect all requests to index.html for client-side routing
+# This should NOT cause infinite loops as it's for non-existent files only
+/api/* 404
+/* /index.html 200

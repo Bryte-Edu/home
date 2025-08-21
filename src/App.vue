@@ -1,11 +1,11 @@
 <script setup lang="ts">
-
-import { MoonIcon, SunIcon } from "@heroicons/vue/24/outline";
+import { MoonIcon, SunIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { HeartIcon } from "@heroicons/vue/24/solid";
 import { ref } from "vue";
 import TonalButton from "./components/ui/TonalButton.vue";
 
 const isDarkMode = ref(false);
+const isMobileMenuOpen = ref(false);
 
 // Check for saved dark mode preference or system preference
 const savedTheme = localStorage.getItem("theme");
@@ -50,21 +50,19 @@ document.documentElement.classList.add("dark");
 </script>
 
 <template>
-  <div class="min-h-screen">
-    <!-- Premium Navigation Header -->
+  <div class="min-h-screen overflow-x-hidden">
     <header class="fixed top-0 left-0 right-0 z-50 nav-premium">
       <div class="flex items-center justify-between py-6 px-8 max-w-7xl mx-auto">
         <div class="flex items-center space-x-4 animate-fade-in-up">
-          <img src="./assets/logo.svg" alt="Bryte logo" class="h-12 w-12" />
+          <img src="./assets/logo.svg" alt="Bryte logo" class="h-8 lg:h-12 w-8 lg:w-12" />
           <router-link
             to="/"
-            class="text-3xl font-manrope font-bold tracking-tight text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
+            class="text-2xl lg:text-3xl font-manrope font-bold tracking-tight text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
           >
             Bryte
           </router-link>
         </div>
         <nav class="hidden md:flex items-center space-x-10 animate-fade-in-up-delay">
-
           <router-link
             to="/#pricing"
             class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
@@ -82,28 +80,64 @@ document.documentElement.classList.add("dark");
             class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
           >Contact</router-link>
         </nav>
-        <div class="flex items-center space-x-4 animate-fade-in-up-delay">
-          <!-- Dark Mode Toggle -->
-          <!-- <button
-            @click="toggleDarkMode"
-            class="p-2 rounded-lg border border-border hover:bg-muted transition-all duration-300 focus-premium"
-            :aria-label="isDarkMode
-            ? 'Switch to light mode'
-            : 'Switch to dark mode'"
-          >
-            <SunIcon v-if="isDarkMode" class="w-5 h-5 text-foreground" />
-            <MoonIcon v-else class="w-5 h-5 text-foreground" />
-          </button> -->
+        <div class="hidden md:flex items-center space-x-4 animate-fade-in-up-delay">
           <TonalButton href="/#pricing" title="Get Started" />
         </div>
+        <div class="md:hidden flex items-center">
+          <button
+            @click="isMobileMenuOpen = !isMobileMenuOpen"
+            class="p-2 rounded-lg text-foreground hover:bg-muted transition-all duration-300 focus-premium"
+            :aria-label="isMobileMenuOpen
+            ? 'Close mobile menu'
+            : 'Open mobile menu'"
+          >
+            <XMarkIcon v-if="isMobileMenuOpen" class="w-8 h-8" />
+            <Bars3Icon v-else class="w-8 h-8" />
+          </button>
+        </div>
       </div>
+      <transition
+        enter-active-class="transition-all duration-300 ease-out"
+        leave-active-class="transition-all duration-300 ease-in"
+        enter-from-class="transform scale-95 opacity-0 -translate-y-2"
+        enter-to-class="transform scale-100 opacity-100 translate-y-0"
+        leave-from-class="transform scale-100 opacity-100 translate-y-0"
+        leave-to-class="transform scale-95 opacity-0 -translate-y-2"
+      >
+        <div
+          v-if="isMobileMenuOpen"
+          class="md:hidden absolute top-full left-0 right-0 bg-background nav-premium shadow-lg"
+        >
+          <div class="flex flex-col items-center py-6 px-8 space-y-6">
+            <router-link
+              @click="isMobileMenuOpen = false"
+              to="/#pricing"
+              class="w-full text-center text-xl font-medium text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
+            >Pricing</router-link>
+            <router-link
+              @click="isMobileMenuOpen = false"
+              to="/download"
+              class="w-full text-center text-xl font-medium text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
+            >Download</router-link>
+            <router-link
+              @click="isMobileMenuOpen = false"
+              to="/about"
+              class="w-full text-center text-xl font-medium text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
+            >About</router-link>
+            <router-link
+              @click="isMobileMenuOpen = false"
+              to="/contact"
+              class="w-full text-center text-xl font-medium text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
+            >Contact</router-link>
+            </div>
+        </div>
+      </transition>
     </header>
 
     <main class="relative">
       <router-view />
     </main>
 
-    <!-- Premium Footer -->
     <footer class="bg-muted py-16">
       <div class="container mx-auto px-8 lg:px-16 xl:px-24">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12">

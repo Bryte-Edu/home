@@ -374,7 +374,7 @@ const principles = [
             updated policy.
           </p>
 
-          <h2 class="heading-premium text-3xl lg:text-4xl mb-6 mt-12">
+          <!-- <h2 class="heading-premium text-3xl lg:text-4xl mb-6 mt-12">
             10. Contact Us
           </h2>
 
@@ -403,7 +403,7 @@ const principles = [
                 >dpo@bryte.education</span>
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

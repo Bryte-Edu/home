@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build && npm run copy-config",
@@ -41,7 +41,7 @@
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.11",
     "typescript": "~5.9.2",
-    "vite": "^7.0.6",
+    "vite": "^7.1.3",
     "vite-plugin-vue-devtools": "^8.0.0",
     "vue-tsc": "^3.0.5"
   }

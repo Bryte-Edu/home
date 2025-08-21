@@ -41,7 +41,7 @@ class SecureAnalytics {
 
   private isValidDomain(): boolean {
     const currentDomain = window.location.hostname
-    
+
     // Allow localhost in development
     if (import.meta.env.DEV && currentDomain === 'localhost') {
       return true
@@ -79,10 +79,10 @@ class SecureAnalytics {
     const script = document.createElement('script')
     script.src = 'https://cdn.databuddy.cc/databuddy.js'
     script.async = true
-    
+
     // Set data attributes
     script.setAttribute('data-client-id', config.clientId)
-    
+
     if (config.trackHashChanges) script.setAttribute('data-track-hash-changes', 'true')
     if (config.trackAttributes) script.setAttribute('data-track-attributes', 'true')
     if (config.trackOutgoingLinks) script.setAttribute('data-track-outgoing-links', 'true')
@@ -126,19 +126,19 @@ class SecureAnalytics {
       }
 
       const script = this.createAnalyticsScript(config)
-      
+
       return new Promise((resolve, reject) => {
         script.onload = () => {
           this.isInitialized = true
           console.info('DataBuddy Analytics initialized successfully')
           resolve(true)
         }
-        
+
         script.onerror = () => {
           console.error('Failed to load DataBuddy Analytics script')
           reject(false)
         }
-        
+
         document.head.appendChild(script)
       })
     } catch (error) {

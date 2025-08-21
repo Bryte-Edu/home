@@ -1,59 +1,36 @@
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
+# MIME type headers for JavaScript modules
+/*.js
+  Content-Type: application/javascript; charset=utf-8
 
-[[headers]]
-  for = "*.mjs"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
+/*.mjs
+  Content-Type: application/javascript; charset=utf-8
 
-[[headers]]
-  for = "*.ts"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
+/*.ts
+  Content-Type: application/javascript; charset=utf-8
 
-[[headers]]
-  for = "*.jsx"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
+/*.jsx
+  Content-Type: application/javascript; charset=utf-8
 
-[[headers]]
-  for = "*.tsx"
-  [headers.values]
-    Content-Type = "application/javascript; charset=utf-8"
+/*.tsx
+  Content-Type: application/javascript; charset=utf-8
 
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Content-Type = "text/css; charset=utf-8"
+# Other MIME types
+/*.css
+  Content-Type: text/css; charset=utf-8
 
-[[headers]]
-  for = "*.json"
-  [headers.values]
-    Content-Type = "application/json; charset=utf-8"
+/*.json
+  Content-Type: application/json; charset=utf-8
 
-[[headers]]
-  for = "*.wasm"
-  [headers.values]
-    Content-Type = "application/wasm"
+/*.wasm
+  Content-Type: application/wasm
 
-# Security headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+# Security headers for all files
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 # Cache control for assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

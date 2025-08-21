@@ -55,7 +55,7 @@ export function useAnalytics() {
   return {
     // State
     isAnalyticsReady: readonly(isAnalyticsReady),
-    
+
     // Methods
     trackEvent,
     trackPageView,
