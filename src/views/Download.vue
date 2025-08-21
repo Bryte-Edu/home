@@ -69,8 +69,8 @@ const systemRequirements: Record<string, Record<string, string>> = {
 };
 
 const stats = [
-  { number: "10K+", label: "Downloads" },
-  { number: "4.8★", label: "App Store Rating" },
+//  { number: "10K+", label: "Downloads" },
+//  { number: "4.8★", label: "App Store Rating" },
   { number: "99.9%", label: "Uptime" },
   { number: "24/7", label: "Support" },
 ];
@@ -110,7 +110,7 @@ const getCurrentRequirements = () => {
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="section-premium-lg relative overflow-hidden">
+    <section class="section-premium pt-[12rem] lg:section-premium-lg relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-brand-lavender-50 via-background to-brand-navy-50 dark:from-brand-navy-950 dark:via-background dark:to-brand-lavender-950/20">
       </div>
 
@@ -212,7 +212,7 @@ const getCurrentRequirements = () => {
           <!-- Download Links & Info -->
           <div>
             <h3 class="text-3xl font-manrope font-bold text-foreground mb-8">
-              Get Bryte for {{
+              Get Bryte for mobile {{
                 platforms.find(p => p.id === selectedPlatform)
                 ?.name
               }}
@@ -221,7 +221,7 @@ const getCurrentRequirements = () => {
             <!-- Mobile Downloads -->
             <div v-if="selectedPlatform === 'mobile'" class="space-y-6">
               <div class="flex flex-col sm:flex-row gap-4">
-                <a
+                <!-- <a
 
                   class="btn-premium bg-black text-white hover:bg-gray-800 px-8 py-4 flex items-center space-x-3"
                 >
@@ -232,7 +232,7 @@ const getCurrentRequirements = () => {
                     <div class="text-xs">Download on the</div>
                     <div class="text-lg font-bold">App Store</div>
                   </div>
-                </a>
+                </a> -->
 
                 <a
                   href="#"
@@ -331,7 +331,7 @@ const getCurrentRequirements = () => {
             </div>
 
             <!-- QR Code for Mobile -->
-            <div
+            <!-- <div
               v-if="selectedPlatform === 'mobile'"
               class="mt-8 card-premium text-center"
             >
@@ -344,7 +344,7 @@ const getCurrentRequirements = () => {
               <p class="text-sm text-muted-foreground">
                 Scan with your phone to download
               </p>
-            </div>
+            </div> -->
           </div>
 
           <!-- Features List -->
@@ -537,7 +537,7 @@ const getCurrentRequirements = () => {
               Download Now
             </a>
             <router-link
-              to="/"
+              to="/about"
               class="inline-block border-2 border-brand-lavender-300 bg-transparent hover:bg-brand-lavender-300 text-brand-lavender-300 hover:text-brand-navy-900 font-bold py-4 px-10 rounded-lg transition-all duration-300 text-center"
             >
               Learn More

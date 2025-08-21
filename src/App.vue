@@ -213,12 +213,12 @@ document.documentElement.classList.add("dark");
                   class="hover:text-foreground transition-colors duration-300 focus-premium"
                 >Privacy Policy</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <a
                   href="#"
                   class="hover:text-foreground transition-colors duration-300 focus-premium"
                 >Careers</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>

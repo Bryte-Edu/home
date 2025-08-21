@@ -41,12 +41,12 @@ const features = [
     description:
       "Track your progress with beautiful, insightful dashboards that show your strengths and areas for improvement.",
   },
-  {
-    icon: GlobeAltIcon,
-    title: "Multilingual Support",
-    description:
-      "Learn in your preferred language with seamless translation and localization for global accessibility.",
-  },
+  // {
+  //   icon: GlobeAltIcon,
+  //   title: "Multilingual Support",
+  //   description:
+  //     "Learn in your preferred language with seamless translation and localization for global accessibility.",
+  // },
   {
     icon: UserGroupIcon,
     title: "Collaborative Learning",
@@ -59,12 +59,24 @@ const features = [
     description:
       "AI creates custom learning journeys tailored to your goals, interests, and current knowledge level.",
   },
+  // {
+  //   icon: AcademicCapIcon,
+  //   title: "Expert Content",
+  //   description:
+  //     "Access curated content from top educators and institutions, verified for quality and accuracy.",
+  // },
   {
-    icon: AcademicCapIcon,
-    title: "Expert Content",
+    icon: GlobeAltIcon,
+    title: "Global Community",
     description:
-      "Access curated content from top educators and institutions, verified for quality and accuracy.",
+      "Join a diverse community of learners from around the world, sharing knowledge and experiences."
   },
+  {
+    icon: DevicePhoneMobileIcon,
+    title: "Mobile Learning",
+    description:
+      "Learn on the go with our fully responsive mobile app, designed for seamless learning anytime, anywhere."
+  }
 ];
 
 const stats = [
@@ -172,7 +184,7 @@ const pricingPlans = [
 <template>
   <div>
     <!-- Premium Hero Section -->
-    <section class="section-premium-lg relative overflow-hidden">
+    <section class="section-premium pt-[12rem] lg:section-premium-lg relative overflow-hidden">
       <!-- Gradient Background -->
       <div class="absolute inset-0 bg-gradient-to-br from-brand-lavender-50 via-background to-brand-navy-50
         dark:from-brand-navy-950 dark:via-background dark:to-brand-lavender-950/20 pointer-events-none">
@@ -192,14 +204,14 @@ const pricingPlans = [
         style="background-image: radial-gradient(circle at 1px 1px, rgba(205, 205, 255, 0.15) 1px, transparent 0); background-size: 40px 40px">
       </div>
 
-      <div class="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-20 relative z-10">
+      <div class="container mx-auto px-8 lg:px-12 xl:px-20 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 justify-between">
           <div class="flex flex-col items-center lg:items-start space-y-8 lg:w-[60%]">
-            <div class="text-center lg:text-left space-y-6 animate-fade-in-up">
-              <h1 class="heading-hero text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
+            <div class="text-center lg:text-left space-y-4 animate-fade-in-up">
+              <h1 class="heading-hero text-5xl lg:text-7xl xl:text-8xl pb-8">
                 Transform Learning with AI
               </h1>
-              <h2 class="subheading-premium text-lg sm:text-xl lg:text-2xl max-w-2xl leading-relaxed">
+              <h2 class="subheading-premium text-lg sm:text-xl lg:text-2xl max-w-2xl leading-relaxed h-wrap">
                 Bryte empowers students worldwide with personalized AI
                 tutoring, advanced analytics, and collaborative learning
                 experiences that adapt to your unique learning style.
@@ -213,13 +225,13 @@ const pricingPlans = [
             </div>
 
             <!-- Stats -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-12 animate-scale-in">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-4 lg:mt-12 animate-scale-in">
               <div v-for="stat in stats" :key="stat.label" class="text-center lg:text-left group">
                 <div
-                  class="text-2xl sm:text-3xl lg:text-4xl font-manrope font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                  class="text-3xl lg:text-4xl font-manrope font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
                   {{ stat.number }}
                 </div>
-                <div class="text-sm font-medium text-muted-foreground">
+                <div class="text-sm font-normal text-muted-foreground">
                   {{ stat.label }}
                 </div>
               </div>
@@ -227,7 +239,7 @@ const pricingPlans = [
           </div>
 
           <!-- Hero Image -->
-          <div class="lg:w-[30%] relative animate-scale-in mt-8 lg:mt-0">
+          <div class="hidden lg:flex lg:w-[30%] relative animate-scale-in mt-8 lg:mt-0">
             <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-premium">
               <img src="/1.jpg" alt="Bryte AI Education Platform"
                 class="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
@@ -332,7 +344,7 @@ const pricingPlans = [
     </section>
 
     <!-- Premium Pricing Section -->
-    <section id="pricing" class="section-premium gradient-overlay-secondary">
+    <!-- <section id="pricing" class="section-premium gradient-overlay-secondary">
       <div class="container mx-auto px-8 lg:px-16 xl:px-24">
         <div class="text-center mb-20 animate-fade-in-up">
           <h2 class="heading-premium text-4xl lg:text-6xl mb-6">
@@ -380,7 +392,7 @@ const pricingPlans = [
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Premium Screenshots Section -->
     <section class="section-premium">

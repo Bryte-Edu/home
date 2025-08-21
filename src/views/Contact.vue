@@ -8,6 +8,7 @@ import {
   PhoneIcon,
 } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
+import { supabase } from "@/lib/supabaseClient";
 
 const form = ref({
   name: "",
@@ -32,55 +33,66 @@ const contactInfo = [
   {
     icon: EnvelopeIcon,
     title: "Email Us",
-    content: "hello@bryte.education",
+    content: "bryteedu@protonmail.com",
     description: "Send us an email and we'll respond within 3 business days (probably sooner!)",
   },
   {
     icon: PhoneIcon,
-    title: "Call Us",
-    content: "+1 (555) 123-4567",
-    description: "Available Monday-Friday, 9 AM - 6 PM PST",
-  },
-  {
-    icon: MapPinIcon,
-    title: "Visit Us",
-    content: "123 Innovation Drive, San Francisco, CA 94105",
-    description: "Our headquarters in the heart of Silicon Valley",
-  },
-  {
-    icon: ChatBubbleLeftRightIcon,
-    title: "Live Chat",
-    content: "Available 24/7",
-    description: "Get instant help through our in-app chat support",
-  },
+    title: "Community Server",
+    content: "Join our Discord community",
+    description: "Connect with other users, share tips, and get help from our team",
+  }
+  // {
+  //   icon: PhoneIcon,
+  //   title: "Call Us",
+  //   content: "+1 (555) 123-4567",
+  //   description: "Available Monday-Friday, 9 AM - 6 PM PST",
+  // },
+  // {
+  //   icon: MapPinIcon,
+  //   title: "Visit Us",
+  //   content: "123 Innovation Drive, San Francisco, CA 94105",
+  //   description: "Our headquarters in the heart of Silicon Valley",
+  // },
+  // {
+  //   icon: ChatBubbleLeftRightIcon,
+  //   title: "Live Chat",
+  //   content: "Available 24/7",
+  //   description: "Get instant help through our in-app chat support",
+  // },
 ];
 
-const offices = [
-  {
-    city: "San Francisco",
-    country: "United States",
-    address: "123 Innovation Drive, CA 94105",
-    timezone: "PST (UTC-8)",
-  },
-  {
-    city: "London",
-    country: "United Kingdom",
-    address: "45 Tech Square, London EC2A 4DN",
-    timezone: "GMT (UTC+0)",
-  },
-  {
-    city: "Singapore",
-    country: "Singapore",
-    address: "88 Marina Bay, Singapore 018956",
-    timezone: "SGT (UTC+8)",
-  },
-];
+// const offices = [
+//   {
+//     city: "San Francisco",
+//     country: "United States",
+//     address: "123 Innovation Drive, CA 94105",
+//     timezone: "PST (UTC-8)",
+//   },
+//   {
+//     city: "London",
+//     country: "United Kingdom",
+//     address: "45 Tech Square, London EC2A 4DN",
+//     timezone: "GMT (UTC+0)",
+//   },
+//   {
+//     city: "Singapore",
+//     country: "Singapore",
+//     address: "88 Marina Bay, Singapore 018956",
+//     timezone: "SGT (UTC+8)",
+//   },
+// ];
 
 const submitForm = async () => {
   isSubmitting.value = true;
 
-  // Simulate form submission
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await supabase.from("contact").insert({
+    full_name: form.value.name,
+    email: form.value.email,
+    subject: form.value.subject,
+    message: form.value.message,
+    category: form.value.category,
+  })
 
   isSubmitting.value = false;
   isSubmitted.value = true;
@@ -277,7 +289,7 @@ const submitForm = async () => {
           </div>
 
           <!-- Office Locations -->
-          <div class="animate-fade-in-up-delay" v-if="offices.length > 0">
+          <!-- <div class="animate-fade-in-up-delay" v-if="offices.length > 0">
             <h2 class="heading-premium text-3xl lg:text-4xl mb-8">
               Our Global Offices
             </h2>
@@ -313,7 +325,7 @@ const submitForm = async () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -364,7 +376,7 @@ const submitForm = async () => {
           </div>
 
           <!-- FAQ 2 -->
-          <div
+          <!-- <div
             @click="faqs[1].isOpen = !faqs[1].isOpen"
             class="card-premium group interactive-premium faq-item cursor-pointer"
             style="pointer-events: auto; position: relative; z-index: 20;"
@@ -392,7 +404,7 @@ const submitForm = async () => {
                 </p>
               </div>
             </Transition>
-          </div>
+          </div> -->
 
           <!-- FAQ 3 -->
           <div
@@ -449,7 +461,7 @@ const submitForm = async () => {
               <div v-if="faqs[3].isOpen" key="content-3" class="mt-4 faq-content">
                 <p class="subheading-premium">
                   We're always looking for talented individuals who share our
-                  passion for education. Check out our careers page or reach out
+                  passion for education. Contact us through mail, or server, or reach out
                   using the "Careers" category above.
                 </p>
               </div>

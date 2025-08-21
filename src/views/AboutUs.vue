@@ -14,7 +14,7 @@ const team = [
     role: "Co-founder",
     avatar: "https://avatars.githubusercontent.com/u/75154889",
     bio:
-      "A 17-year-old high school student with a passionn for technology. He loves building innovative solutions to real-world problems.",
+      "A 17-year-old high school student with a passion for technology. He loves building innovative solutions to real-world problems.",
   },
   {
     name: "Aditya Gupta",
@@ -61,7 +61,7 @@ const milestones = [
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="section-premium-lg relative overflow-hidden">
+    <section class="section-premium pt-[12rem] lg:section-premium-lg relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-brand-lavender-50 via-background to-brand-navy-50 dark:from-brand-navy-950 dark:via-background dark:to-brand-lavender-950/20">
       </div>
 
@@ -189,7 +189,7 @@ const milestones = [
     </section>
 
     <!-- Timeline Section -->
-    <section class="section-premium gradient-overlay-secondary">
+    <!-- <section class="section-premium gradient-overlay-secondary">
       <div class="container mx-auto px-8 lg:px-16 xl:px-24">
         <div class="text-center mb-20 animate-fade-in-up">
           <h2 class="heading-premium text-4xl lg:text-6xl mb-6">Our Journey</h2>
@@ -200,9 +200,9 @@ const milestones = [
         </div>
 
         <div class="max-w-4xl mx-auto animate-fade-in-up-delay">
-          <div class="relative">
+          <div class="relative"> -->
             <!-- Timeline line -->
-            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-brand-lavender-400">
+            <!-- <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-brand-lavender-400">
             </div>
 
             <div class="space-y-12">
@@ -225,7 +225,7 @@ const milestones = [
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- CTA Section -->
     <section class="section-premium bg-gradient-to-br from-brand-navy-900 via-brand-navy-800 to-brand-navy-700 text-white relative overflow-hidden">
