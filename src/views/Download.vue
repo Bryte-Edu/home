@@ -222,7 +222,7 @@ const getCurrentRequirements = () => {
                   </div>
                 </a> -->
 
-                <a href="#"
+                <a href="https://play.google.com/store/apps/details?id=dev.pranav.bryte"
                   class="btn-premium bg-black text-white hover:bg-gray-800 px-8 py-4 flex items-center space-x-3">
                   <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path
