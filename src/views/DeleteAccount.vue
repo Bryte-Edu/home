@@ -92,49 +92,44 @@ const hideSnackbar = () => {
   showSnackbar.value = false
 }
 </script>
-
 <template>
   <div class="min-h-screen">
-    <!-- Hero Section -->
     <section class="section-premium-lg relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-red-50 via-background to-orange-50 dark:from-red-950/20 dark:via-background dark:to-orange-950/20 pointer-events-none"></div>
 
-      <!-- Animated Warning Orbs -->
       <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-to-r from-red-300/10 to-orange-400/10 rounded-full blur-3xl animate-float"></div>
       <div class="absolute bottom-1/4 right-1/3 w-80 h-80 bg-gradient-to-r from-orange-400/10 to-red-400/10 rounded-full blur-3xl animate-float" style="animation-delay: 1s;"></div>
 
-      <div class="container mx-auto px-8 lg:px-16 xl:px-24 relative z-10">
+      <div class="container mx-auto px-6 sm:px-8 lg:px-16 xl:px-24 relative z-10">
         <div class="text-center max-w-4xl mx-auto">
-          <div class="w-24 h-24 bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900 dark:to-red-800 rounded-full flex items-center justify-center mx-auto mb-8 animate-fade-in-up">
-            <ExclamationTriangleIcon class="w-12 h-12 text-red-600 dark:text-red-400" />
+          <div class="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900 dark:to-red-800 rounded-full flex items-center justify-center mx-auto mb-6 sm:mb-8 animate-fade-in-up">
+            <ExclamationTriangleIcon class="w-10 h-10 sm:w-12 sm:h-12 text-red-600 dark:text-red-400" />
           </div>
-          <h1 class="heading-hero text-5xl lg:text-7xl mb-8 animate-fade-in-up">
+          <h1 class="heading-hero text-4xl sm:text-5xl lg:text-7xl mb-6 sm:mb-8 animate-fade-in-up">
             Delete Account
           </h1>
-          <p class="subheading-premium text-xl lg:text-2xl leading-relaxed animate-fade-in-up-delay">
+          <p class="subheading-premium text-lg sm:text-xl lg:text-2xl leading-relaxed animate-fade-in-up-delay">
             We're sorry to see you go. This action is permanent and will remove all your data from our platform.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Main Content -->
     <section class="section-premium">
-      <div class="container mx-auto px-8 lg:px-16 xl:px-24">
+      <div class="container mx-auto px-6 sm:px-8 lg:px-16 xl:px-24">
         <div class="max-w-2xl mx-auto">
           <div class="card-premium animate-fade-in-up">
-            <div class="flex items-center space-x-3 mb-8">
-              <TrashIcon class="w-8 h-8 text-red-500" />
-              <h2 class="heading-premium text-3xl">Confirm Account Deletion</h2>
+            <div class="flex items-center space-x-3 mb-6 sm:mb-8">
+              <TrashIcon class="w-7 h-7 sm:w-8 sm:h-8 text-red-500" />
+              <h2 class="heading-premium text-2xl sm:text-3xl">Confirm Account Deletion</h2>
             </div>
 
-            <!-- Warning Box -->
-            <div class="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-8">
-              <h3 class="text-xl font-bold text-red-800 dark:text-red-400 mb-4 flex items-center">
-                <ExclamationTriangleIcon class="w-6 h-6 mr-2" />
+            <div class="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20 border border-red-200 dark:border-red-800 rounded-xl p-4 sm:p-6 mb-6 sm:mb-8">
+              <h3 class="text-lg sm:text-xl font-bold text-red-800 dark:text-red-400 mb-4 flex items-center">
+                <ExclamationTriangleIcon class="w-5 h-5 sm:w-6 sm:h-6 mr-2 text-lg" />
                 This action is permanent and irreversible
               </h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-red-700 dark:text-red-300 text-sm">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 text-red-700 dark:text-red-300 text-md">
                 <div class="space-y-2">
                   <p>• All learning progress will be lost</p>
                   <p>• Course completions deleted</p>
@@ -148,24 +143,23 @@ const hideSnackbar = () => {
               </div>
             </div>
 
-            <!-- Form -->
-            <div class="space-y-6">
+            <div class="space-y-5 sm:space-y-6">
               <div>
-                <label class="block text-sm font-medium text-foreground mb-3">
+                <label class="block text-md font-medium text-foreground mb-2 sm:mb-3">
                   Email Address
                 </label>
                 <input
                   type="email"
                   v-model="userEmail"
                   placeholder="Enter your email address"
-                  class="w-full px-4 py-4 bg-card border-2 border-border rounded-lg focus:ring-2 focus:ring-brand-lavender-400 focus:border-brand-lavender-400 transition-all duration-300 text-foreground placeholder-muted-foreground"
+                  class="w-full px-4 py-3 sm:py-4 bg-card border-2 border-border rounded-lg focus:ring-2 focus:ring-brand-lavender-400 focus:border-brand-lavender-400 transition-all duration-300 text-foreground placeholder-muted-foreground font-mono"
                   style="cursor: text !important; pointer-events: auto !important; z-index: 30; position: relative;"
                   required
                 />
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-foreground mb-3">
+                <label class="block text-md font-medium text-foreground mb-2 sm:mb-3">
                   Password
                 </label>
                 <div class="relative">
@@ -173,41 +167,31 @@ const hideSnackbar = () => {
                     :type="showPassword ? 'text' : 'password'"
                     v-model="userPassword"
                     placeholder="Enter your password"
-                    class="w-full px-4 py-4 pr-12 bg-card border-2 border-border rounded-lg focus:ring-2 focus:ring-brand-lavender-400 focus:border-brand-lavender-400 transition-all duration-300 text-foreground placeholder-muted-foreground"
+                    class="w-full px-4 py-3 sm:py-4 pr-12 bg-card border-2 border-border rounded-lg focus:ring-2 focus:ring-brand-lavender-400 focus:border-brand-lavender-400 transition-all duration-300 text-foreground placeholder-muted-foreground"
                     style="cursor: text !important; pointer-events: auto !important; z-index: 30; position: relative;"
                     required
                   />
-                  <!-- <button
-                    type="button"
-                    @click="togglePasswordVisibility"
-                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                    style="pointer-events: auto !important; z-index: 31; position: relative;"
-                  >
-                    <EyeIcon v-if="!showPassword" class="w-5 h-5" />
-                    <EyeSlashIcon v-else class="w-5 h-5" />
-                  </button> -->
                 </div>
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-foreground mb-3">
+                <label class="block text-md font-medium text-foreground mb-2 sm:mb-3">
                   Type "DELETE MY ACCOUNT" to confirm
                 </label>
                 <input
                   type="text"
                   v-model="confirmationText"
                   placeholder="DELETE MY ACCOUNT"
-                  class="w-full px-4 py-4 bg-card border-2 border-border rounded-lg focus:ring-2 focus:ring-brand-lavender-400 focus:border-brand-lavender-400 transition-all duration-300 text-foreground placeholder-muted-foreground font-mono text-center"
+                  class="w-full px-4 py-3 sm:py-4 bg-card border-2 border-border rounded-lg focus:ring-2 focus:ring-brand-lavender-400 focus:border-brand-lavender-400 transition-all duration-300 text-foreground placeholder-muted-foreground font-mono text-center"
                   style="cursor: text !important; pointer-events: auto !important; z-index: 30; position: relative;"
                   required
                 />
               </div>
 
-              <!-- Action Buttons -->
-              <div class="flex justify-between pt-6">
+              <div class="flex flex-col sm:flex-row justify-between pt-4 sm:pt-6 space-y-4 sm:space-y-0 sm:space-x-4">
                 <button
                   @click="goBack"
-                  class="bg-background hover:bg-muted text-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300 border border-border shadow-sm hover:shadow-md"
+                  class="hidden lg:flex bg-background hover:bg-muted text-foreground font-medium py-3 px-6 rounded-lg transition-all duration-300 border border-border shadow-sm hover:shadow-md w-full sm:w-auto"
                 >
                   <ArrowLeftIcon class="w-5 h-5 inline mr-2" />
                   Go Back
@@ -216,7 +200,7 @@ const hideSnackbar = () => {
                 <button
                   @click="deleteAccount"
                   :disabled="!canDelete || isDeleting"
-                  class="bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 disabled:cursor-not-allowed flex items-center space-x-2 shadow-lg hover:shadow-xl"
+                  class="bg-red-600 hover:bg-red-700 disabled:bg-gray-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 disabled:cursor-not-allowed flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl w-full sm:w-auto"
                 >
                   <TrashIcon v-if="!isDeleting" class="w-5 h-5" />
                   <svg v-else class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -228,36 +212,10 @@ const hideSnackbar = () => {
               </div>
             </div>
           </div>
-
-          <!-- Alternative Options -->
-          <!-- <div class="card-premium mt-12 animate-fade-in-up-delay">
-            <h3 class="heading-premium text-xl mb-4">Before you go...</h3>
-            <p class="subheading-premium text-sm mb-6">
-              Consider these alternatives instead of deleting your account:
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors cursor-pointer interactive-premium">
-                <h4 class="font-bold text-foreground">Pause Learning</h4>
-                <p class="text-xs text-muted-foreground mt-1">Take a break without losing progress</p>
-              </div>
-
-              <div class="p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors cursor-pointer interactive-premium">
-                <h4 class="font-bold text-foreground">Export Data</h4>
-                <p class="text-xs text-muted-foreground mt-1">Download your learning history</p>
-              </div>
-
-              <div class="p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors cursor-pointer interactive-premium">
-                <h4 class="font-bold text-foreground">Contact Support</h4>
-                <p class="text-xs text-muted-foreground mt-1">Get help with your concerns</p>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
 
-    <!-- Success Snackbar -->
     <Transition
       enter-active-class="transition duration-300 ease-out"
       enter-from-class="transform translate-y-full opacity-0"
@@ -268,34 +226,34 @@ const hideSnackbar = () => {
     >
       <div
         v-if="showSnackbar"
-        class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full"
+        class="fixed bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-50 max-w-sm sm:max-w-md w-full px-4"
       >
         <div
-          class="card-premium shadow-2xl p-6"
+          class="card-premium shadow-2xl p-4 sm:p-6"
           :class="snackbarType === 'success'
         ? 'bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800'
         : 'bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800'"
         >
           <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-3 sm:space-x-4">
           <div
-            class="w-10 h-10 rounded-full flex items-center justify-center"
+            class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center"
             :class="snackbarType === 'success'
           ? 'bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-emerald-900 dark:to-emerald-800'
           : 'bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900 dark:to-red-800'"
           >
             <CheckCircleIcon
           v-if="snackbarType === 'success'"
-          class="w-6 h-6 text-emerald-600 dark:text-emerald-400"
+          class="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 dark:text-emerald-400"
             />
             <ExclamationTriangleIcon
           v-else
-          class="w-6 h-6 text-red-600 dark:text-red-400"
+          class="w-5 h-5 sm:w-6 sm:h-6 text-red-600 dark:text-red-400"
             />
           </div>
           <div>
             <h4
-          class="font-bold"
+          class="font-bold text-md sm:text-base"
           :class="snackbarType === 'success'
             ? 'text-emerald-800 dark:text-emerald-400'
             : 'text-red-800 dark:text-red-400'"
@@ -303,7 +261,7 @@ const hideSnackbar = () => {
           {{ snackbarType === 'success' ? 'Account Deleted Successfully' : 'Error' }}
             </h4>
             <p
-          class="text-sm"
+          class="text-xs sm:text-md"
           :class="snackbarType === 'success'
             ? 'text-emerald-700 dark:text-emerald-300'
             : 'text-red-700 dark:text-red-300'"
@@ -319,7 +277,7 @@ const hideSnackbar = () => {
             : 'text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-200'"
           class="transition-colors"
         >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>

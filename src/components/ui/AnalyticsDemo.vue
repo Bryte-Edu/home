@@ -234,10 +234,10 @@
           class="feature-card text-center hover:scale-105 transition-transform duration-300 cursor-pointer"
         >
           <div class="text-3xl mb-2">{{ achievement.icon }}</div>
-          <h4 class="font-semibold text-sm text-foreground">
+          <h4 class="font-semibold text-lg text-foreground">
             {{ achievement.name }}
           </h4>
-          <p class="text-xs text-muted-foreground mt-1">
+          <p class="text-md text-muted-foreground mt-1">
             {{ achievement.description }}
           </p>
         </div>
@@ -258,7 +258,7 @@
             clip-rule="evenodd"
           />
         </svg>
-        <span class="text-sm text-foreground font-medium">
+        <span class="text-md text-foreground font-medium">
           Interactive dashboard with real-time insights and AI-powered
           recommendations
         </span>

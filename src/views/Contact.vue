@@ -150,13 +150,13 @@ const submitForm = async () => {
               :is="info.icon"
               class="w-12 h-12 text-brand-navy-600 dark:text-brand-lavender-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
             />
-            <h3 class="text-lg font-manrope font-bold mb-2 text-foreground">
+            <h3 class="text-xl font-manrope font-bold mb-2 text-foreground">
               {{ info.title }}
             </h3>
-            <p class="text-brand-navy-700 dark:text-brand-lavender-300 font-medium mb-2">
+            <p class="text-brand-navy-700 text-lg dark:text-brand-lavender-300 font-medium mb-2">
               {{ info.content }}
             </p>
-            <p class="subheading-premium text-sm">{{ info.description }}</p>
+            <p class="subheading-premium text-md">{{ info.description }}</p>
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@ const submitForm = async () => {
                 <div>
                   <label
                     for="name"
-                    class="block text-sm font-medium text-foreground mb-2"
+                    class="block text-md font-medium text-foreground mb-2"
                   >Full Name</label>
                   <input
                     type="text"
@@ -190,7 +190,7 @@ const submitForm = async () => {
                 <div>
                   <label
                     for="email"
-                    class="block text-sm font-medium text-foreground mb-2"
+                    class="block text-md font-medium text-foreground mb-2"
                   >Email Address</label>
                   <input
                     type="email"
@@ -206,7 +206,7 @@ const submitForm = async () => {
               <div>
                 <label
                   for="category"
-                  class="block text-sm font-medium text-foreground mb-2"
+                  class="block text-md font-medium text-foreground mb-2"
                 >Category</label>
                 <select
                   id="category"
@@ -224,7 +224,7 @@ const submitForm = async () => {
               <div>
                 <label
                   for="subject"
-                  class="block text-sm font-medium text-foreground mb-2"
+                  class="block text-md font-medium text-foreground mb-2"
                 >Subject</label>
                 <input
                   type="text"
@@ -239,7 +239,7 @@ const submitForm = async () => {
               <div>
                 <label
                   for="message"
-                  class="block text-sm font-medium text-foreground mb-2"
+                  class="block text-md font-medium text-foreground mb-2"
                 >Message</label>
                 <textarea
                   id="message"

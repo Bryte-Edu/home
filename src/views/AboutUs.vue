@@ -85,7 +85,7 @@ const milestones = [{
     <!-- Mission & Vision Section -->
     <section class="section-premium">
       <div class="container mx-auto px-8 lg:px-16 xl:px-24">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-[75%] gap-12 items-center">
           <div class="animate-fade-in-up">
             <h2 class="heading-premium text-4xl lg:text-5xl mb-8">
               Our Mission
@@ -103,15 +103,15 @@ const milestones = [{
               learner can succeed regardless of their starting point.
             </p>
           </div>
-          <div class="animate-scale-in">
+          <!-- <div class="animate-scale-in">
             <div class="relative rounded-3xl overflow-hidden shadow-premium">
-              <img src="/2.jpeg" alt="Students learning with Bryte"
+              <img src="/1.jpeg" alt="Students learning with Bryte"
                 class="w-full h-96 object-cover" />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent">
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -137,7 +137,7 @@ const milestones = [{
             <h3 class="text-xl font-manrope font-bold mb-4 text-foreground">
               {{ value.title }}
             </h3>
-            <p class="subheading-premium text-sm leading-relaxed">
+            <p class="subheading-premium text-md leading-relaxed">
               {{ value.description }}
             </p>
           </div>
@@ -173,7 +173,7 @@ const milestones = [{
                 class="text-brand-navy-600 dark:text-brand-lavender-400 font-medium mb-4">
                 {{ member.role }}
               </p>
-              <p class="subheading-premium text-sm leading-relaxed">
+              <p class="subheading-premium text-md leading-relaxed">
                 {{ member.bio }}
               </p>
             </a>

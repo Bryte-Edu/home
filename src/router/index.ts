@@ -35,7 +35,7 @@ const router = createRouter({
       component: Download,
     },
     {
-      path: "/deletemyccount",
+      path: "/deletemyaccount",
       name: "deletemyaccount",
       component: DeleteAccount
     }
