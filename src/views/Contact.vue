@@ -6,6 +6,7 @@ import {
   GlobeAltIcon,
   MapPinIcon,
   PhoneIcon,
+  HomeIcon
 } from "@heroicons/vue/24/outline";
 import { ref } from "vue";
 import { supabase } from "@/lib/supabaseClient";
@@ -37,11 +38,12 @@ const contactInfo = [
     description: "Send us an email and we'll respond within 3 business days (probably sooner!)",
   },
   {
-    icon: PhoneIcon,
+    icon: HomeIcon,
     title: "Community Server",
     content: "Join our Discord community",
     description: "Connect with other users, share tips, and get help from our team",
-  }
+    link: "https://discord.gg/bryte"
+  },
   // {
   //   icon: PhoneIcon,
   //   title: "Call Us",
@@ -54,12 +56,12 @@ const contactInfo = [
   //   content: "123 Innovation Drive, San Francisco, CA 94105",
   //   description: "Our headquarters in the heart of Silicon Valley",
   // },
-  // {
-  //   icon: ChatBubbleLeftRightIcon,
-  //   title: "Live Chat",
-  //   content: "Available 24/7",
-  //   description: "Get instant help through our in-app chat support",
-  // },
+  {
+    icon: ChatBubbleLeftRightIcon,
+    title: "Contact Us",
+    content: "Available 24/7",
+    description: "Contact us for any inquiries from the forum available below, or through the email.",
+  }
 ];
 
 // const offices = [
@@ -135,7 +137,9 @@ const submitForm = async () => {
     <!-- Contact Information -->
     <section class="py-16">
       <div class="container mx-auto px-8 lg:px-16 xl:px-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in-up">
+        <div
+          class="flex flex-col lg:flex-row justify-center gap-8 animate-fade-in-up"
+        >
           <div
             v-for="(info, index) in contactInfo"
             :key="info.title"
@@ -157,7 +161,6 @@ const submitForm = async () => {
         </div>
       </div>
     </section>
-
     <!-- Contact Form & Map Section -->
     <section class="section-premium gradient-overlay-primary">
       <div class="container mx-auto px-8 lg:px-16 xl:px-24">

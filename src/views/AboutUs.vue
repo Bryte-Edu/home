@@ -19,7 +19,7 @@ const team = [{
     name: "Nethical",
     role: "Co-founder",
     avatar: "https://avatars.githubusercontent.com/u/79095297",
-    github: "https://github.com/nethical6"
+    github: "https://github.com/nethical6",
     bio: "A 18-year-old high school student with a passion for technology and computers.",
   },
 ];
@@ -105,7 +105,7 @@ const milestones = [{
           </div>
           <div class="animate-scale-in">
             <div class="relative rounded-3xl overflow-hidden shadow-premium">
-              <img src="/2.jpg" alt="Students learning with Bryte"
+              <img src="/2.jpeg" alt="Students learning with Bryte"
                 class="w-full h-96 object-cover" />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent">

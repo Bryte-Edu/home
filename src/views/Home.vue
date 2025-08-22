@@ -80,7 +80,7 @@ const features = [
 ];
 
 const stats = [
-  { number: "10K+", label: "Students Learning" },
+  // { number: "10K+", label: "Students Learning" },
   { number: "500+", label: "Courses Available" },
   { number: "95%", label: "Success Rate" },
   { number: "4.8/5", label: "User Rating" },
@@ -114,29 +114,50 @@ const testimonials = [
 
 const screenshots = [
   {
-    src: "/1.jpg",
-    alt: "Bryte Dashboard - Overview of learning progress and achievements",
+    src: "/1.jpeg",
+    alt: "Bryte Dashboard - Personalized learning at your fingertips",
   },
   {
-    src: "/2.jpg",
-    alt: "AI Tutor Interface - Interactive learning with personalized guidance",
+    src: "/2.jpeg",
+    alt: "Gamified Learning - Engaging quizzes and interactive content",
   },
   {
-    src: "/3.jpg",
-    alt: "Course Catalog - Discover thousands of courses across all subjects",
+    src: "/3.jpeg",
+    alt: "AI Explanations - Detailed solutions powered by AI",
   },
   {
-    src: "/4.jpg",
+    src: "/4.jpeg",
+    alt: "Content Library - Upload and access diverse learning materials",
+  },
+  {
+    src: "/5.jpeg",
+    alt: "Bookmarks & Notes - Save and organize important content",
+  },
+  {
+    src: "/6.jpeg",
     alt: "Analytics Dashboard - Detailed insights into learning patterns",
   },
   {
-    src: "/5.jpg",
-    alt: "Study Groups - Collaborate with peers in virtual study rooms",
+    src: "/7.jpeg",
+    alt: "Daily Progress Tracking - Stay on top of your learning goals",
   },
   {
-    src: "/6.jpg",
-    alt: "Mobile Learning - Learn anywhere with our responsive mobile app",
+    src: "/8.jpeg",
+    alt: "Configuration - Customize your learning experience",
   },
+  {
+    src: "/9.jpeg",
+    alt: "Chapter Progress Overview - Track your current progress and understanding at a glance",
+  },
+  {
+    src: "/10.jpeg",
+    alt: "Topic Understanding - Visualize your mastery of different subjects",
+
+  },
+  {
+    src: "/11.jpeg",
+    alt: "Test Preparation - Quickly view your weaknesses in a topic and quickly learn with cards",
+  }
 ];
 
 const pricingPlans = [
@@ -220,7 +241,7 @@ const pricingPlans = [
 
             <!-- Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up-delay">
-              <FilledButton href="#features" title="Start Learning Free" class="w-full sm:w-auto" />
+              <FilledButton href="/download" title="Start Learning" class="w-full sm:w-auto" />
               <TonalButton href="#analytics" title="See How It Works" class="w-full sm:w-auto" />
             </div>
 
@@ -241,8 +262,8 @@ const pricingPlans = [
           <!-- Hero Image -->
           <div class="hidden lg:flex lg:w-[30%] relative animate-scale-in mt-8 lg:mt-0">
             <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-premium">
-              <img src="/1.jpg" alt="Bryte AI Education Platform"
-                class="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
+              <img src="/1.jpeg" alt="Bryte AI Education Platform"
+                class="w-full h-auto max-h-[80vh] transform hover:scale-105 transition-transform duration-700" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
           </div>
@@ -408,12 +429,12 @@ const pricingPlans = [
         </div>
 
         <!-- Premium Desktop view -->
-        <div class="hidden lg:grid grid-cols-3 gap-8 animate-fade-in-up-delay">
+        <div class="hidden lg:grid grid-cols-3 gap-16 animate-fade-in-up-delay">
           <div v-for="(screenshot, index) in screenshots" :key="screenshot.src"
             class="group relative overflow-hidden rounded-3xl shadow-premium-lg hover:shadow-premium transition-all duration-500"
             :style="{ animationDelay: `${index * 100}ms` }">
             <img :src="screenshot.src" :alt="screenshot.alt"
-              class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" />
+              class="w-fit h-[70vh]  object-cover group-hover:scale-110 transition-transform duration-700" />
             <div
               class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div class="absolute bottom-6 left-6 right-6 text-white">
@@ -424,12 +445,12 @@ const pricingPlans = [
         </div>
 
         <!-- Premium Mobile carousel -->
-        <div class="lg:hidden">
+        <div class="lg:hidden flex items-center">
           <Carousel class="w-full">
             <CarouselContent>
               <CarouselItem v-for="screenshot in screenshots" :key="screenshot.src">
                 <div class="rounded-3xl overflow-hidden shadow-premium-lg">
-                  <img :src="screenshot.src" :alt="screenshot.alt" class="w-full h-80 object-cover" />
+                  <img :src="screenshot.src" :alt="screenshot.alt" class="w-[80vw] lg:w-full h-fit lg:h-80 object-cover" />
                 </div>
               </CarouselItem>
             </CarouselContent>

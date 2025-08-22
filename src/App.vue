@@ -62,26 +62,28 @@ document.documentElement.classList.add("dark");
             Bryte
           </router-link>
         </div>
-        <nav class="hidden md:flex items-center space-x-10 animate-fade-in-up-delay">
-          <router-link
-            to="/#pricing"
-            class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
-          >Pricing</router-link>
-          <router-link
-            to="/download"
-            class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
-          >Download</router-link>
-          <router-link
-            to="/about"
-            class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
-          >About</router-link>
-          <router-link
-            to="/contact"
-            class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
-          >Contact</router-link>
-        </nav>
+        <div class="flex-1 flex justify-end me-12">
+          <nav class="hidden md:flex space-x-10 animate-fade-in-up-delay">
+            <!-- <router-link
+              to="/#pricing"
+              class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
+            >Pricing</router-link> -->
+            <router-link
+              to="/download"
+              class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
+            >Download</router-link>
+            <router-link
+              to="/about"
+              class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
+            >About</router-link>
+            <router-link
+              to="/contact"
+              class="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium focus-premium"
+            >Contact</router-link>
+          </nav>
+        </div>
         <div class="hidden md:flex items-center space-x-4 animate-fade-in-up-delay">
-          <TonalButton href="/#pricing" title="Get Started" />
+          <TonalButton href="/download" title="Get Started" />
         </div>
         <div class="md:hidden flex items-center">
           <button
@@ -109,11 +111,11 @@ document.documentElement.classList.add("dark");
           class="md:hidden absolute top-full left-0 right-0 bg-background nav-premium shadow-lg"
         >
           <div class="flex flex-col items-center py-6 px-8 space-y-6">
-            <router-link
+            <!-- <router-link
               @click="isMobileMenuOpen = false"
               to="/#pricing"
               class="w-full text-center text-xl font-medium text-foreground hover:text-brand-navy-700 dark:hover:text-brand-lavender-300 transition-colors duration-300"
-            >Pricing</router-link>
+            >Pricing</router-link> -->
             <router-link
               @click="isMobileMenuOpen = false"
               to="/download"
@@ -169,12 +171,12 @@ document.documentElement.classList.add("dark");
                   class="hover:text-foreground transition-colors duration-300 focus-premium"
                 >Features</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <router-link
                   to="/#pricing"
                   class="hover:text-foreground transition-colors duration-300 focus-premium"
                 >Pricing</router-link>
-              </li>
+              </li> -->
               <li>
                 <router-link
                   to="/#analytics"
